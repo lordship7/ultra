@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+ body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            color: orange;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #333;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #003366;
+            color: white;
+        }
+
+        #about, #admissions, #news, #events, #hall-of-fame, #principal-message {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .hall-of-fame-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hall-of-fame-item {
+            background:orange;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .hall-of-fame-item img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .hall-of-fame-item h3 {
+            font-size: 18px;
+            color: #003366;
+        }
+        /* For large desktops and laptops */
+@media (min-width: 1200px) {
+    /* Styles for large desktops */
+    body {
+        font-size: 18px;
+    }
+    /* Additional styles */
+}
+
+/* For tablets in landscape mode and smaller desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for tablets in landscape mode and smaller desktops */
+    body {
+        font-size: 16px;
+    }
+    /* Additional styles */
+}
+
+/* For tablets in portrait mode */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets in portrait mode */
+    body {
+        font-size: 15px;
+    }
+    /* Additional styles */
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    body {
+        font-size: 14px;
+    }
+    /* Additional styles */
+}
+
+/* For extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Styles for extra small devices */
+    body {
+        font-size: 13px;
+    }
+    /* Additional styles */
+}
+
+
+nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+
+nav a, .dropdown-button {
+      color: #333;
+      padding: 5px 50px;
+    position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown-button:hover {
+      background-color: #003366;
+      color: white;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color:003366;
+    }
+
+    /* Show the dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block}
+
+
+        .social-icons a {
+    color: white;
+    font-size: 20px; /* Adjust icon size */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color:orange; /* Hover effect to change color */
+}
+.footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 10px;
+        }
+          /* Footer Styling */
+          footer {
+            background-color: #003366;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+</style>
+<body>
+    <header>
+        <h1>Ultra Excellence Model School</h1>
+        <p>Diligence In Valour</p>
+    </header>
+    <nav>
+        <a href="Ultra Excellence Model School.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <span class="dropdown-button">More</span>
+          <div class="dropdown-content">
+            <a href="admission.html">Admissions</a>
+            <a href="#news">School News</a>
+            <a href="#events">Events</a>
+            <a href="#hall-of-fame">Hall of Fame</a>
+            <a href="#principal-message">Principal's Message</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are committed to providing high-quality education, rooted in Christian values, that empowers our students to achieve academic excellence and leadership skills.</p>
+    <div class="hall-of-fame-container">
+        <div class="hall-of-fame-item">
+            <h3>CREATION</h3>
+            <p>ULTRA EXCELLENCE MODEL SCHOOL came in existence to contribute in the development of the world .</p>
+        </div>
+</section>
+
+<section id="hall-of-fame">
+   
+    <div class="hall-of-fame-container">
+        <div class="hall-of-fame-item">
+            <h3>MISSION</h3>
+            <p>ULTRA EXCELLENCE MODEL SCHOOL came in existence to contribute in the development of the world .</p>
+        </div>
+        <div class="hall-of-fame-item">
+           
+            <h3>VISION</h3>
+            <p>We train our leaders for a better future.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-links">
+
+    </div>
+    
+    <!-- Social Media Icons using Font Awesome -->
+    <div class="social-icons">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+    
+    <p>&copy; 2024 Ultra Excellence Model School. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

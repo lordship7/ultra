@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Result Checker</title>
+  <style>
+    body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            color: orange;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #333;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #003366;
+            color: white;
+        }
+
+
+    h2 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .download-button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .download-button:hover {
+      background-color: #0056b3;
+    }
+
+    .container {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: orange;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+/* For smaller tablets and phones in landscape mode */
+@media (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    button, .download-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media (max-width: 575px) {
+    body {
+        font-size: 13px;
+    }
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    button, .download-button {
+        font-size: 12px;
+        padding: 6px;
+    }
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+nav a, .dropdown-button {
+      color: #333;
+      padding: 5px 50px;
+    position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown-button:hover {
+      background-color: #003366;
+      color: white;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block}
+
+
+          /* Footer Styling */
+          footer {
+            background-color: #003366;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ultra Excellence Model School</h1>
+    <p>Diligence In Valour</p>
+</header>
+
+<nav>
+  <a href="Ultra Excellence Model School.html">Home</a>
+  <a href="about.html">About</a>
+  <div class="dropdown">
+    <span class="dropdown-button">More</span>
+    <div class="dropdown-content">
+      <a href="admission.html">Admissions</a>
+      <a href="#news">School News</a>
+      <a href="#events">Events</a>
+      <a href="#hall-of-fame">Hall of Fame</a>
+      <a href="#principal-message">Principal's Message</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+  <div class="container">
+    <h2>Student Result Checker</h2>
+  
+    <form id="result-checker-form" onsubmit="return false;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="year">Year:</label>
+      <input type="text" id="year" name="year" required>
+  
+      <label for="class">Class:</label>
+      <input type="text" id="class" name="class" required>
+
+        
+
+      <label for="term">Term:</label>
+      <input for="text" id="term" name="term" required>
+  
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin" required>
+  
+      <button type="button" onclick="checkResult()">Check Result</button>
+    </form>
+  
+    <div id="error-message">Invalid credentials. Please try again.</div>
+  </div>
+
+
+<!-- Modal for result image -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Result Image</h3>
+    <img id="result-image" src="" alt="Result Image">
+    <a id="download-link" href="#" download class="download-button">Download Image</a>
+  </div>
+</div>
+
+<script>
+  // Array of students with hardcoded PINs, terms, and image paths
+  const students = [
+    { name: "John Doe", year: "2023", class: "10A", term: "2nd term", pin: "0234", image: "images/s12345_Term1_2023.jpg" },
+    { name: "Jane Smith", year: "2023", class: "10B", pin: "2345", term: "1st term", image: "images/jane_smith_2023_10B.png" },
+    { name: "Alice Brown", year: "2023", class: "10A", pin: "3456", term: "2nd term", image: "images/alice_brown_2023_10A.png" },
+    { name: "Goodnews Nkanta", year: "2023", class: "10A", pin: "1705", term: "2nd term", image: "images/QUEEN.jpg" },
+    // ... additional student entries
+  ];
+
+  // Function to check the student's result
+  function checkResult() {
+    // Get input values
+    const name = document.getElementById('name').value.trim().toLowerCase();
+    const year = document.getElementById('year').value.trim();
+    const term = document.getElementById('term').value.trim().toLowerCase();
+    const studentClass = document.getElementById('class').value.trim().toUpperCase();
+    const pin = document.getElementById('pin').value.trim();
+
+    // Find the student in the "database"
+    const student = students.find(
+      s => 
+        s.name.toLowerCase() === name && 
+        s.year === year && 
+        s.class === studentClass && 
+        s.term.toLowerCase() === term && 
+        s.pin === pin
+    );
+
+    // Show result or error message
+    if (student) {
+      const img = document.getElementById('result-image');
+      img.src = student.image;
+
+      // Set the download link to the image path
+      const downloadLink = document.getElementById('download-link');
+      downloadLink.href = student.image;
+
+      // Display the modal
+      openModal();
+    } else {
+      document.getElementById('error-message').innerText = "Invalid credentials. Please try again.";
+      document.getElementById('error-message').style.display = 'block';
+    }
+  }
+
+  // Function to open the modal
+  function openModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+
+  // Close the modal when clicking outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+</script>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366 ;
+            color: orange;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #333;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #003366;
+            color: white;
+        }
+
+        #home {
+            background: url() no-repeat center center;
+            background-image: url(images/ue.jpg);
+            background-size:cover;
+            color:003366;
+            background-color:#003366;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        #home h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 20px;
+        }
+
+        #about, #admissions, #news, #events, #hall-of-fame, #principal-message {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 10px;
+            
+        }
+
+        .event, .news-item {
+            background:orange;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .event h3, .news-item h3 {
+            color: #003366;
+        }
+
+        /* Principal Message Layout */
+        .principal-message-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            text-align: left;
+        }
+
+        .principal-image img {
+            border-radius: 50%;
+            width: 300px; /* Adjust size as needed */
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .principal-text {
+            max-width: 600px;
+        }
+
+        /* Hall of Fame Layout */
+        .hall-of-fame-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hall-of-fame-item {
+            background-color: #003366;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 250px;
+            width: 100%;
+        }
+
+        .hall-of-fame-item img {
+            border-radius: 50px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .hall-of-fame-item h3 {
+            font-size: 18px;
+            color:orange;
+            
+        }
+
+        .hall-of-fame-item p {
+            font-size: 18px;
+            color:white;
+            
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+  /* Basic styling for the box */
+  .box {
+    width: 200px;
+    height: 50px;
+    background-color:maroon;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: shake 0.5s ease-in-out infinite;
+    box-sizing:100px;
+  
+  }
+
+  .box a {
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+
+  /* Keyframes for shaking animation */
+  @keyframes shake {
+    0%, 100% { transform: translate(0, -50%); }
+    25% { transform: translate(4px, -50%); }
+    75% { transform: translate(-4px, -50%); }
+  }
+
+
+  /* For large desktops and laptops */
+@media (min-width: 1200px) {
+    /* Styles for large desktops */
+    body {
+        font-size: 18px;
+    }
+    /* Additional styles */
+}
+
+/* For tablets in landscape mode and smaller desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for tablets in landscape mode and smaller desktops */
+    body {
+        font-size: 16px;
+    }
+    /* Additional styles */
+}
+
+/* For tablets in portrait mode */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets in portrait mode */
+    body {
+        font-size: 15px;
+    }
+    /* Additional styles */
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    body {
+        font-size: 14px;
+    }
+    /* Additional styles */
+}
+
+/* For extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    /* Styles for extra small devices */
+    body {
+        font-size: 13px;
+    }
+    /* Additional styles */
+}
+
+
+nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+
+nav a, .dropdown-button {
+      color: #333;
+      padding: 5px 50px;
+    position: relative;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover, .dropdown-button:hover {
+      background-color: #003366;
+      color: white;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color:003366;
+    }
+
+    /* Show the dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block}
+
+        .social-icons a {
+    color: white;
+    font-size: 20px; /* Adjust icon size */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color:orange; /* Hover effect to change color */
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ultra Excellence Model School</h1>
+    <p>Diligence In Valour</p>
+</header>
+
+<nav>
+    <a href="Ultra Excellence Model School.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <span class="dropdown-button">More</span>
+      <div class="dropdown-content">
+        <a href="admission.html">Admissions</a>
+        <a href="#news">School News</a>
+        <a href="#events">Events</a>
+        <a href="#hall-of-fame">Hall of Fame</a>
+        <a href="#principal-message">Principal's Message</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="box">
+    <a href="index.html">Check your results !!</a>
+</div>
+
+<section id="home">
+    <h1>Welcome to Ultra Excellence Modal School</h1>
+    <p>First Private Paramilitary School In Nigeria</p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are committed to providing high-quality education, rooted in Christian values, that empowers our students to achieve academic excellence and leadership skills.</p>
+</section>
+
+<section id="admissions">
+    <h2>Admissions</h2>
+    <p>Applications are now open for the new academic session. At NCI Uyo, we provide a nurturing environment for both academic and personal development. Join us today!</p>
+    <p>For more information on how to apply, download the <a href="#">admission brochure</a> or contact the Admissions office.</p>
+</section>
+
+<section id="news">
+    <h2>School News</h2>
+    <div class="news-item">
+        <h3>New Science Lab Inaugurated</h3>
+        <p>We are proud to announce the opening of our new state-of-the-art science laboratory, providing a hands-on learning experience for students.</p>
+    </div>
+    <div class="news-item">
+        <h3>Sports Day 2025</h3>
+        <p>Our annual Sports Day event was a great success with students from all levels participating in various sporting events!</p>
+    </div>
+</section>
+
+<section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="event">
+        <h3>Open Day - 15th June 2024</h3>
+        <p>Join us for our Open Day event where prospective students and parents can learn more about our programs and facilities.</p>
+    </div>
+    <div class="event">
+        <h3>Annual Graduation Ceremony - 30th July 2024</h3>
+        <p>We will be celebrating the success of our graduating students. Don’t miss out on this memorable event!</p>
+    </div>
+</section>
+
+<section id="hall-of-fame">
+    <h2>Hall of Fame</h2>
+    <p>We celebrate the achievements of our students, both academically and in extracurricular activities. Below are a few of our standout students:</p>
+    <div class="hall-of-fame-container">
+        <div class="hall-of-fame-item">
+            <img src="images/john-doe.jpg" alt="John Doe">
+            <h3>Student of the Year: John Doe</h3>
+            <p>John excelled in academics and demonstrated exemplary leadership skills throughout the year.</p>
+        </div>
+        <div class="hall-of-fame-item">
+            <img src="images/QUEEN.jpg" alt="Jane Smith">
+            <h3>Top Athlete: Jane Smith</h3>
+            <p>Jane broke several records in athletics and represented the school at regional competitions.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="principal-message">
+    <h2>Message from the Principal</h2>
+    <div class="principal-message-container">
+        <div class="principal-image">
+            <img src="images/commandant copy.jpg" alt="Principal's Picture" width="150">
+        </div>
+        <div class="principal-text">
+            <p>Welcome to ULTRA EXCELLENCE MODEL SCHOOL, where academic excellence and character development go hand in hand. Our mission is to provide an environment that nurtures intellectual, social, and spiritual growth.</p>
+            <p>At ULTRA EXCELLENCE MODEL SCHOOL, we believe in preparing our students not only for exams but also for life. We encourage each student to pursue their passions, take leadership roles, and contribute to the betterment of society.</p>
+            <p>We are excited to welcome new students and families into our vibrant school community. Together, let’s shape the future!</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-links">
+
+    </div>
+    
+    <!-- Social Media Icons using Font Awesome -->
+    <div class="social-icons">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+    </div>
+    
+    <p>&copy; 2024 Ultra Excellence Model School. All Rights Reserved.</p>
+</footer>
